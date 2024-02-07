@@ -5,11 +5,9 @@ const socketio = require('socket.io')
 const Filter = require('bad-words')
 const { generateMessage, generateLocationMessage } = require('./Utils/messages.js')
 const { addUser, removeUser, getUser, getUsersInRoom } = require('./Utils/users.js')
-
-
 const app = express()
 const server = http.createServer(app)//expicityly created server and paased express to use that in websocket.i9o
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 8080
 const publicDirectoryPath = path.join(__dirname, '../public')
 const io = socketio(server)
 
